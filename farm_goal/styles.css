@@ -1,0 +1,876 @@
+:root {
+    --bodyColor: #fff;
+    --bodytextColor: #333333;
+    --anchorColor: green;
+    --headerbackgroundColor: #fefefe;
+    --primarybuttonColor: #055b08;
+    --buttonTextColor: #fff;
+    --buttonPadding: 1rem 2rem;
+    --borderColor: yellowgreen;
+    --primaryShadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    --primaryBorderRadius: 5px;
+    --boxpadding: 10px;
+    --highlightsColor: #FBC02D;
+    --footertitleColor: #ffeb3b88;
+    --footer_anchor_list_Color: #ffffff46;
+}
+
+
+* {
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'poppins';
+    background-color: var(--bodyColor);
+
+}
+
+/* *********************************** HEADER SECTION ****************************** */
+
+
+header {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    /* border-bottom: solid 1px #000; */
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 100;
+    background-color: var(--headerbackgroundColor);
+}
+
+
+.farm-goal-logo h1 {
+    font-family: cursive;
+    color: #FBC02D;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    height: 5rem;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--anchorColor);
+    font-weight: bold;
+    position: relative;
+    outline: none;
+}
+
+nav ul li a::before {
+    content: '';
+    background-color: orange;
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    transition-duration: 0.4s;
+}
+
+nav ul li a:hover::before {
+    width: 100%;
+
+}
+
+
+nav ul .orderButton {
+    text-decoration: none;
+    color: var(--buttonTextColor);
+    padding: var(--buttonPadding);
+    border-radius: 50px;
+    background-color: var(--primarybuttonColor);
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: var(--primaryShadow);
+    outline: none;
+}
+
+
+nav ul .orderButton:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+
+header .openMenubar {
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+/* ************************************* MAIN SECTION ****************************** */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+
+
+/* *********************************** HOME SECTION ************************** */
+
+
+#home {
+    width: 100%;
+    height: 100vh;
+    margin-top: 5rem;
+    color: var(--bodyColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background-image: linear-gradient(#00000075), url(Asserts/home_background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+.home_title {
+    text-align: center;
+}
+
+.home_title h2 {
+    font-size: 2.5rem;
+    /* color: var(--bodytextColor); */
+    transition-duration: 0.4s ease-in-out;
+}
+
+
+.home_buttons {
+    margin-top: 3rem;
+}
+
+.home_buttons .orderButton {
+    text-decoration: none;
+    color: var(--buttonTextColor);
+    padding: var(--buttonPadding);
+    border-radius: 50px;
+    background-color: var(--primarybuttonColor);
+    font-weight: bold;
+    font-size: 1.1rem;
+    outline: none;
+}
+
+
+.home_buttons .orderButton:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+
+.home_buttons .productviewButton {
+    text-decoration: none;
+    color: var(--buttonTextColor);
+    padding: var(--buttonPadding);
+    border-radius: 50px;
+    background-color: var(--primarybuttonColor);
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-left: 2rem;
+    outline: none;
+}
+
+
+.home_buttons .productviewButton:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.Button span {
+    width: 20%;
+    color: green;
+    border-radius: 50%;
+    padding: 0 5px;
+    background-color: yellow;
+}
+
+
+/* ***************************************** SUB HOME SECTION ************************** */
+
+.sub_home {
+    width: 87%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.sub_home_title {
+    text-align: center;
+}
+
+
+.sub_home_title h2 {
+    font-size: 2rem;
+    color: var(--highlightsColor);
+}
+
+.sub_home_content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sub_home_introductory p {
+    text-align: center;
+}
+
+
+.what-we-offer h2 {
+    margin: 0 0 1rem 1rem;
+}
+
+
+.what-we-offer .categories {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.categories section {
+    border: solid var(--borderColor);
+    width: 16rem;
+    height: 20rem;
+    text-align: center;
+    /* background-color: rgba(0, 128, 0, 0.792); */
+    /* color: var(--bodyColor); */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem .5rem;
+    border-radius: var(--primaryBorderRadius);
+    transition-duration: 0.4s;
+}
+
+
+.categories section:hover {
+    transform: translateY(5px);
+    box-shadow: var(--primaryShadow);
+    cursor: pointer;
+}
+
+.categories section h3 {
+    color: orange;
+}
+
+.products_timeline {
+    width: 100%;
+    height: 6rem;
+    display: flex;
+}
+
+.products_timeline img {
+    width: 14.3%;
+    transition: 0.3s ease;
+}
+
+
+.products_timeline img:hover {
+    transform: scale(0.95);
+    /* cursor: pointer; */
+}
+
+
+
+/* ************************************ ORDER PROCEDURE ******************* */
+
+
+.ordering_procedure {
+    width: 87%;
+    height: 100vh;
+    /* border: solid black;/ */
+    text-align: center;
+}
+
+.ordering_procedure h2 {
+    margin-top: 2rem;
+}
+
+
+.procedure_container {
+    width: 100%;
+    height: inherit;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.ordering_procedure_content {
+    width: 40%;
+    height: 30rem;
+    /* border: solid black; */
+    padding: var(--boxpadding);
+    text-align: center;
+}
+
+.ordering_procedure_content section {
+    margin-top: 2rem;
+}
+
+.procedure-box span {
+    color: orange;
+}
+
+.procedure-box {
+    padding: var(--boxpadding);
+    border: solid var(--borderColor);
+    margin-bottom: 1rem;
+    border-radius: var(--primaryBorderRadius);
+    text-align: center;
+    transition-duration: 0.4s;
+}
+
+.procedure-box:hover {
+    transform: translateX(5px);
+    box-shadow: var(--primaryShadow);
+    cursor: pointer;
+}
+
+.weekly_list a {
+    color: var(--anchorColor);
+    transition-duration: 0.4s;
+}
+
+.weekly_list a:hover {
+    color: orange;
+}
+
+
+.ordering_procedure_summary {
+    width: 60%;
+    height: 30rem;
+    /* border: solid black; */
+    background-image: url(Asserts/procedure_summary-background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: var(--primaryBorderRadius);
+}
+
+
+
+/* *********************************** TESTIMONIALS ********************** */
+
+.testimonials {
+    width: 87%;
+    height: 100vh;
+    /* border: solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image_preview {
+    width: 100%;
+    height: 30%;
+    background-image: linear-gradient(#0000005c), url(Asserts/image_preview_background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.image_preview h2 {
+    font-size: 2rem;
+    color: var(--bodyColor);
+    margin-top: 2rem;
+}
+
+.reviews {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    /* border: solid blue; */
+}
+
+
+.customer_testimonials {
+    width: 60%;
+    height: 100%;
+    padding: var(--boxpadding);
+    /* border: solid black; */
+}
+
+.customer_testimonials h2 {
+    text-align: center;
+    color: green;
+}
+
+.teatimnials_container {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.teatimnials_container section {
+    border: solid var(--borderColor);
+    padding: var(--boxpadding);
+    border-radius: var(--primaryBorderRadius);
+    transition-duration: 0.4s;
+}
+
+
+.teatimnials_container section:hover {
+    transform: translateX(5px);
+    box-shadow: var(--primaryShadow);
+    cursor: pointer;
+}
+
+.teatimnials_container h3 {
+    color: orange;
+}
+
+
+.experince_share {
+    width: 40%;
+    height: 100%;
+    /* border: solid black; */
+    padding: var(--boxpadding);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: rgba(0, 128, 0, 0.802); */
+}
+
+.experince_share h2 {
+    color: green;
+}
+
+.experince_share form {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 2rem;
+}
+
+
+.experince_share input {
+    width: 100%;
+    height: 15%;
+    padding: 5px;
+    border: solid var(--borderColor);
+    outline: none;
+    border-radius: var(--primaryBorderRadius);
+}
+
+
+.experince_share textarea {
+    width: 100%;
+    height: 40%;
+    border: solid var(--borderColor);
+    outline: none;
+    resize: none;
+    border-radius: var(--primaryBorderRadius);
+    padding: 5px;
+}
+
+.experince_share label {
+    font-weight: bold;
+}
+
+
+.experince_share .productviewButton {
+    text-decoration: none;
+    color: var(--buttonTextColor);
+    padding: var(--buttonPadding);
+    border-radius: 50px;
+    background-color: var(--primarybuttonColor);
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    outline: none;
+}
+
+
+.experince_share .productviewButton:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+
+
+
+/* ******************* MJ FARMS ABOUT SECTION ****************** */
+/* 
+.main_about {
+    width: 100%;
+    height: auto;
+    
+} */
+
+#about_mj_farms {
+    width: 100%;
+    height: 100vh;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.about_image_container {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(#0000003e), url(Asserts/procedure_summary-background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.about_image_container h1 {
+    color: var(--bodyColor);
+    font-size: 2.5rem;
+}
+
+.about_image_container .get_in_touch {
+    text-decoration: none;
+    color: var(--buttonTextColor);
+    padding: var(--buttonPadding);
+    border-radius: 50px;
+    background-color: var(--primarybuttonColor);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+
+.about_image_container .get_in_touch:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+
+.Introduction_content {
+    width: 87%;
+    height: 40%;
+    text-align: center;
+    padding: var(--boxpadding);
+}
+
+
+.about_mission_vision {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+    background-color: var(--primarybuttonColor);
+}
+
+.mission_vision {
+    width: 87%;
+    height: 80%;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+}
+
+
+.Mission,
+.Vision {
+    width: 50%;
+    height: 100%;
+    border: solid var(--borderColor);
+    padding: var(--boxpadding);
+    border-radius: var(--primaryBorderRadius);
+    position: relative;
+}
+
+.mission_vision p, h2 {
+    position: relative;
+    z-index: 1;
+}
+
+.Mission::before {
+    content: '';
+    width: 50%;
+    height: 100%;
+    background-color: rgb(255, 166, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0 50% 50% 0;
+    inset: 0;
+    z-index: 0;
+    mix-blend-mode: multiply;
+}
+
+
+.Vision::after {
+    content: '';
+    width: 50%;
+    height: 100%;
+    background-color: rgb(255, 166, 0);
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50% 0 0 50%;
+}
+
+.mission_vision h2 {
+    color: yellow;
+}
+
+
+.mission_vision p {
+    color: var(--bodyColor);
+}
+
+
+.stake_holders {
+    width: 87%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* gap: 2rem; */
+    align-items: center;
+}
+
+
+.title {
+    width: 100%;
+    height: 15%;
+    text-align: center;
+    padding: 5px 0;
+}
+
+
+.title h2 {
+    color: var(--highlightsColor);
+    font-size: 2rem;
+}
+
+
+.stake_holders_card {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.stake_holders_card section {
+    width: 35%;
+    height: 100%;
+    border: solid var(--borderColor);
+}
+
+
+.stake_holder_image {
+    width: 100%;
+    height: 80%;
+    padding: var(--boxpadding);
+    background-image: url(Asserts/tomatoes.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.stake_holder_title {
+    width: 100%;
+    height: 20%;
+    padding: var(--boxpadding);
+    align-items: center;
+}
+
+.stake_holder_title h2 {
+    color: var(--primarybuttonColor);
+}
+
+
+.news_letter {
+    width: 87%;
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-image: linear-gradient(#00000034), url(Asserts/news_letter_background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    border-radius: var(--primaryBorderRadius);
+    margin-bottom: 2rem;
+}
+
+.news_letter h2 {
+    color: var(--bodyColor);
+}
+
+
+.news_letter form {
+    width: 50%;
+}
+
+
+.news_letter label {
+    color: var(--bodyColor);
+    font-weight: bold;
+}
+
+.news_letter input {
+    width: 100%;
+    padding: var(--boxpadding);
+    border: solid var(--borderColor);
+    border-radius: var(--primaryBorderRadius);
+    outline: none;
+}
+
+.news_letter button {
+    text-decoration: none;
+    color: var(--buttonTextColor);
+    padding: var(--buttonPadding);
+    border-radius: 50px;
+    background-color: var(--primarybuttonColor);
+    font-weight: bold;
+    font-size: 1.1rem;
+    outline: none;
+}
+
+
+.news_letter button:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+
+
+/* ************************ PRODUCTS SECTION **************************** */
+
+
+#products_mj_farms {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.products_image_container {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(#00000054), url(Asserts/vegetables.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+.products_image_container h1 {
+    color: var(--bodyColor);
+    font-size: 2.5rem;
+}
+
+.products_image_container .products_Button {
+    text-decoration: none;
+    color: var(--buttonTextColor);
+    padding: var(--buttonPadding);
+    border-radius: 50px;
+    background-color: var(--primarybuttonColor);
+    font-weight: bold;
+    font-size: 1.1rem;
+    outline: none;
+}
+
+
+.products_image_container .products_Button:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+
+.products_introduction {
+    width: 87%;
+    height: 30%;
+    text-align: center;
+    padding: var(--boxpadding);
+}
+
+
+
+/* ******************************* FOOTER SECTION ***************************** */
+
+footer {
+    background-color: #5a1d07;
+    width: 100%;
+    height: 15rem;
+    padding: 1rem 0;
+}
+
+
+footer li {
+    list-style-type: none;
+    color: var(--footer_anchor_list_Color);
+}
+
+
+footer a {
+    text-decoration: none;
+    color: var(--footer_anchor_list_Color);
+    outline: none;
+}
+
+footer a:hover {
+    color: var(--bodyColor);
+}
+
+.footer_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.footer_content h3 {
+    color: var(--footertitleColor);
+}

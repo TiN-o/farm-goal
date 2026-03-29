@@ -322,7 +322,6 @@ main {
 .ordering_procedure_content {
     width: 40%;
     height: 30rem;
-    /* border: solid black; */
     padding: var(--boxpadding);
     text-align: center;
 }
